@@ -1,9 +1,19 @@
 import React from "react";
 
 class Greeter extends React.Component {
-  message = "Hello there, Friend";
+  constructor(values) {
+    super(values);
+    this.state = { message: "Hello There", messageClass: "message" };
+  }
+
+  // message = "Hello there";
+  // messageClass = "message";
   render() {
-    return <span>{this.message}</span>;
+    let greetingMsg = this.state.message.toLowerCase();
+    if (this.props.name) {
+      greetingMsg += `, ${this.props.name.toLowerCase()}`;
+    }
+    return <span className={this.messageClass}>{greetingMsg}</span>;
   }
 }
 
