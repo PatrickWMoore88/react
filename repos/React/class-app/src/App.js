@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   name = "Patrick";
@@ -11,9 +13,9 @@ class App extends React.Component {
     return (
       // <> is a react fragment and is the same as <React.Fragment>
       <>
-        <header className="header">header</header>
-        <h1 className="hello">Hello World</h1>
-        <footer className="footer">footer</footer>
+        <Header />
+        <h1 className="hello">Hey There!</h1>
+        <Footer />
       </>
     );
   }
