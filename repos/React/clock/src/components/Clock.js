@@ -18,7 +18,9 @@ export default class Clock extends Component {
       <>
         <h1>Central Time Zone</h1>
         <h2>Houston TX</h2>
-        <h2>{this.state.time.toLocaleTimeString("en-US", { hour12: true })}</h2>
+        <h2>
+          {this.state.time.toLocaleTimeString("en-US", { hour12: false })}
+        </h2>
       </>
     );
   }

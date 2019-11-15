@@ -23,7 +23,7 @@ export default class Alarm extends Component {
   }
   setCurrentTime() {
     this.setState({
-      currentTime: new Date().toLocaleTimeString("en-US", { hour12: true })
+      currentTime: new Date().toLocaleTimeString("en-US", { hour12: false })
     });
   }
   setAlarmTime(e) {
@@ -34,7 +34,7 @@ export default class Alarm extends Component {
     });
   }
   checkAlarmClock() {
-    if (this.state.alarmTime == "undefined" || !this.state.alarmTime) {
+    if (this.state.alarmTime === "undefined" || !this.state.alarmTime) {
       this.alarmMessage = "Please set your alarm.";
     } else {
       this.alarmMessage = "Your alarm is set for " + this.state.alarmTime + ".";

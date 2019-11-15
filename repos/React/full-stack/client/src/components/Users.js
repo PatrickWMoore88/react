@@ -9,13 +9,13 @@ export class Users extends Component {
     fetch("/users")
       .then(res => res.json())
       // .then(users => this.setState({ users: users })) both are the same but the state key and value are the same name.
-      .then(users => this.setState({ users }));
+      .then(data => this.setState({ users: data }));
   }
   render() {
     return (
       <ul>
-        {this.state.users.map(user => {
-          return <li>{user}</li>;
+        {this.state.users.map((user, index) => {
+          return <li key={index}>{user}</li>;
         })}
       </ul>
     );

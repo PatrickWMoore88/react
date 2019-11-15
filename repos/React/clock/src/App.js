@@ -1,6 +1,5 @@
 import React from "react";
 import AppRouter from "./AppRouter";
-import Clock from "./components/Clock";
 import Menu from "./components/Menu";
 
 function App() {

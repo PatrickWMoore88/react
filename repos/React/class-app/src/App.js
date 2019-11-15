@@ -21,8 +21,4 @@ class App extends React.Component {
   }
 }
 
-// The dev will not create an element like this
-// const app = new App();
-// console.log(app);
-
 export default App;

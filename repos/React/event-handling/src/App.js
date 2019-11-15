@@ -11,9 +11,9 @@ export default class App extends Component {
   handleLasers(id) {
     this.setState(state => ({ isActive: true }));
     if (id === "1") {
-      alert(`Active ${id} Laser`);
+      alert(`Firing ${id} Laser`);
     } else {
-      alert(`Active ${id} Lasers`);
+      alert(`Firing ${id} Lasers`);
     }
   }
   render() {
