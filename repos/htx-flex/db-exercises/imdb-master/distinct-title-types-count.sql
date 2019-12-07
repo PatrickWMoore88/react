@@ -1,0 +1,1 @@
+select title_type, count(*) from title_basics group by title_type;

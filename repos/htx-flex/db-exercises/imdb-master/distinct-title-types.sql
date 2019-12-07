@@ -1,0 +1,1 @@
+select distinct title_type from title_basics

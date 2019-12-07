@@ -1,0 +1,1 @@
+select primary_title, length(primary_title) from title_basics
