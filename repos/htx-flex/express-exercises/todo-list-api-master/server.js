@@ -14,19 +14,22 @@ var todoList = [
 
 // GET /api/todos
 app.get("/api/todos", (req, res, next) => {
-  console.log(todoList);
+  res.json(todoList);
 });
 
 // GET /api/todos/:id
 app.get("/api/todos/:id", (req, res, next) => {
-  console.log(req.params.id);
+  let todoItem = todoList.find(function(element) {
+    return element.id.toString() === req.params.id;
+  });
+  res.json(todoItem.todo);
 });
 
 // POST /api/todos
 app.post("/api/todos", (req, res, next) => {
-  let nextId = owners.length + 1;
+  let nextId = todoList.length + 1;
   todoList.push({ id: nextId, todo: "Add Items" });
-  console.log(todoList);
+  res.json(todoList);
 });
 
 // PUT /api/todos/:id
@@ -34,7 +37,7 @@ app.put("/api/todos/:id", (req, res, next) => {
   let id = req.params.id;
   let i = id - 1;
   todoList[i].Completed = "Yes";
-  console.log(todoList);
+  res.json(todoList);
 });
 
 // DELETE /api/todos/:id
@@ -42,7 +45,7 @@ app.delete("/api/todos/:id", (req, res, next) => {
   let id = req.params.id;
   let i = id - 1;
   todoList.splice(i, 1);
-  console.log(todoList);
+  res.json(todoList);
 });
 
 app.listen(3000, function() {

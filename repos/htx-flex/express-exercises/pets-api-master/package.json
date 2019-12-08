@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/adamszaruga/pets-api.git"
   },
-  "author": "",
+  "author": "Patrick Moore",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/adamszaruga/pets-api/issues"
